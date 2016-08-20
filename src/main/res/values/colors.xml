@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="indigo" type="color">#FF303F9F</item>
+    <item name="deep_purple" type="color">#FF512DA8</item>
+    <item name="transparent" type="color">#0FFF</item>
+
+</resources>

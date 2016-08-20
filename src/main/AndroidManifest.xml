@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hegesippe.swifttimer" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" >
+        <receiver android:name=".STWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.hegesippe.swifttimer.action.ACTIVITY_LAUNCH" />
+                <action android:name="com.hegesippe.swifttimer.REFRESH" />
+                <action android:name="com.hegesippe.swifttimer.SCHEDULE" />
+                <action android:name="com.hegesippe.swifttimer.STOP" />
+                <action android:name="com.hegesippe.swifttimer.START" />
+                <action android:name="com.hegesippe.swifttimer.SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info"
+                />
+        </receiver>
+
+        <receiver android:name=".AlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ScheduleActivity"
+            android:theme="@android:style/Theme.Dialog"
+            android:excludeFromRecents="true"
+            >
+        </activity>
+
+        <activity android:name=".SettingsActivity"
+            android:excludeFromRecents="true"
+            >
+            <intent-filter>
+                <!--<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />-->
+                <action android:name="com.hegesippe.swifttimer.action.ACTIVITY_LAUNCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colorsListArray">
+        <item>Purple</item>
+        <item>Dark purple</item>
+        <item>Deep purple</item>
+        <item>Dark deep purple</item>
+        <item>Indigo</item>
+        <item>Dark indigo</item>
+        <item>Teal</item>
+        <item>Dark teal</item>
+        <item>Brown</item>
+        <item>Dark brown</item>
+        <item>Blue grey</item>
+        <item>Dark blue grey</item>
+        <item>Grey</item>
+        <item>Dark grey</item>
+    </string-array>
+    <string-array name="colorsListValues">
+        <item>#FF9C27B0</item>
+        <item>#FF7B1FA2</item>
+        <item>#FF673AB7</item>
+        <item>#FF512DA8</item>
+        <item>#FF3F51B5</item>
+        <item>#FF303F9F</item>
+        <item>#FF009688</item>
+        <item>#FF00796B</item>
+        <item>#FF795548</item>
+        <item>#FF5D4037</item>
+        <item>#FF607D8B</item>
+        <item>#FF455A64</item>
+        <item>#FF9E9E9E</item>
+        <item>#FF616161</item>
+    </string-array>
+</resources>

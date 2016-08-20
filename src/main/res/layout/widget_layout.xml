@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/widget_height"
+    android:orientation="horizontal"
+    android:background="@color/indigo"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:id="@+id/linLayout">
+
+    <ImageButton
+        android:id="@+id/stgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shortcut_settings"
+        android:textColor="@android:color/primary_text_light"
+        android:src="@drawable/ic_settings_white_36dp"
+        android:maxHeight="60dp"
+        android:maxWidth="60dp"
+        android:minHeight="5dp"
+        android:minWidth="5dp"
+        android:cropToPadding="false"
+        android:baselineAlignBottom="false"
+        android:adjustViewBounds="true"
+        android:background="@color/transparent"
+ />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="35dp"
+        android:textSize="@dimen/time_widget_text_size"
+        android:text="@string/time_hint"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+
+        />
+
+    <ImageButton
+        android:id="@+id/updBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_refresh_white_36dp"
+        android:minHeight="12dp"
+        android:minWidth="12dp"
+        android:cropToPadding="false"
+        android:baselineAlignBottom="false"
+        android:adjustViewBounds="true"
+        android:background="@color/transparent" />
+
+    <ImageButton
+        android:id="@+id/schBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_arrow_white_36dp"
+        android:minHeight="12dp"
+        android:minWidth="12dp"
+        android:cropToPadding="false"
+        android:background="@color/transparent"
+        android:layout_marginLeft="10dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Main settings"
+        android:key="pref_key_main_settings">
+
+        <CheckBoxPreference
+            android:key="sound"
+            android:title="Sounds"/>
+
+        <CheckBoxPreference
+            android:key="notif"
+            android:title="Notifications"/>
+
+        <CheckBoxPreference
+            android:key="vibration"
+            android:title="Vibration"/>
+
+        <EditTextPreference
+            android:inputType="number"
+            android:title="Refreshing period in seconds"
+            android:summary="Higher values preserve your battery"
+            android:key="freq_secs"/>
+
+        <ListPreference
+            android:title="Background color"
+            android:key="background_color"
+            android:defaultValue="@color/indigo"
+            android:entries="@array/colorsListArray"
+            android:entryValues="@array/colorsListValues" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Pomodoro settings"
+        android:key="pref_key_pomodoro_settings">
+
+        <CheckBoxPreference
+            android:key="pomodoro"
+            android:title="Pomodoro mode "/>
+
+        <EditTextPreference
+            android:inputType="number"
+            android:title="Work time in minutes"
+            android:summary="Usually about 25 minutes"
+            android:key="work_time_minutes"/>
+
+        <EditTextPreference
+            android:inputType="number"
+            android:title="Break time in minutes"
+            android:summary="Usually about 5 minutes"
+            android:key="break_time_minutes"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

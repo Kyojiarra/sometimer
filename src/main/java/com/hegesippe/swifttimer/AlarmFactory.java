@@ -10,15 +10,12 @@ import android.util.Log;
 
 import java.util.HashMap;
 
-/**
- * Created by Администратор on 08.09.2015.
- */
-public class AlarmFactory {
+public final class AlarmFactory {
 
     private static HashMap<Integer, Alarm> map = new HashMap<>();
     private static AlarmManager am;
 
-    public static void commonSchedule(Context context, int appWidgetId, long time, long frequency) {
+    static void commonSchedule(Context context, int appWidgetId, long time, long frequency) {
         am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         map.put(appWidgetId, new Alarm(time, System.currentTimeMillis()));
         Log.d("L", "scheduling... " + appWidgetId);
@@ -40,7 +37,7 @@ public class AlarmFactory {
 
     }
 
-    public static void pomodoroSchedule(Context context, int appWidgetId, long work_time, long break_time, long frequency) {
+    static void pomodoroSchedule(Context context, int appWidgetId, long work_time, long break_time, long frequency) {
         //main pomodoro alarm (30min by default)
         am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         map.put(appWidgetId, new Alarm(work_time + break_time, System.currentTimeMillis()));
@@ -66,19 +63,19 @@ public class AlarmFactory {
                         , 0));
     }
 
-    public static long getAlarmStartTime(int appWidgetId) {
+    static long getAlarmStartTime(int appWidgetId) {
         return map.get(appWidgetId).getStartTime();
     }
 
-    public static long getAlarmTime(int appWidgetId) {
+    static long getAlarmTime(int appWidgetId) {
         return map.get(appWidgetId).getTime();
     }
 
-    public static boolean isTicking(int appWidgetId) {
+    static boolean isTicking(int appWidgetId) {
         return map.containsKey(appWidgetId);
     }
 
-    public static void cancel(Context context, int appWidgetId) {
+    static void cancel(Context context, int appWidgetId) {
         am.cancel(PendingIntent.getBroadcast(context, appWidgetId,
                 new Intent(context, AlarmReceiver.class), 0));
         am.cancel(PendingIntent.getBroadcast(context, -appWidgetId,

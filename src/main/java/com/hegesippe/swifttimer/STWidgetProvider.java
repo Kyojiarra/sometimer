@@ -11,11 +11,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.RemoteViews;
-
 import java.util.HashMap;
 
-
-public class STWidgetProvider extends AppWidgetProvider {
+public final class STWidgetProvider extends AppWidgetProvider {
 
     static final String ZEROSTRING = "00:00:00";
     static final String REFRESH = "com.hegesippe.swifttimer.REFRESH";

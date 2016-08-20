@@ -14,10 +14,8 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 
-/**
- * Created by Администратор on 05.09.2015.
- */
-public class AlarmReceiver extends BroadcastReceiver {
+final class AlarmReceiver extends BroadcastReceiver {
+    private final static long[] vibro_pattern = {1000, 1000};
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -41,13 +39,12 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
     }
 
-    protected void fireVibration(Context context) {
+    private void fireVibration(Context context) {
         Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        long[] pattern = {1000, 1000};
-        v.vibrate(pattern, -1);
+        v.vibrate(vibro_pattern, -1);
     }
 
-    protected void fireNotification(Context context) {
+    private void fireNotification(Context context) {
         NotificationManager mNotifyMgr =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationCompat.Builder mBuilder =
@@ -57,7 +54,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                         .setContentText("SwiftTimer notification");
     mNotifyMgr.notify(1, mBuilder.build());
     }
-    protected void fireSound(Context context) {
+    private void fireSound(Context context) {
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         MediaPlayer mp = MediaPlayer.create(context, notification);
         mp.start();

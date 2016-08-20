@@ -1,7 +1,7 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="8dp"
+<TableLayout android:layout_margin="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TableRow
         android:id="@+id/tableRow1"
@@ -111,10 +111,6 @@
             android:text="@string/stop_clear"
             style="@style/numpad"
             android:padding="-15dp" />
-        <!--android:background="@color/background_floating_material_dark"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/numpad_text_size"
-        android:fontFamily="sans-serif-light"-->
 
         <Button
             android:id="@+id/numpad0"

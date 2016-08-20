@@ -9,13 +9,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-/**
- * Created by Администратор on 24.08.2015.
- */
-
 //TODO: add feedback to clicks in layout xml
 
-public class ScheduleActivity extends Activity implements View.OnClickListener {
+public final class ScheduleActivity extends Activity implements View.OnClickListener {
 
     private String timeString;
     private TextView mTimeView;
